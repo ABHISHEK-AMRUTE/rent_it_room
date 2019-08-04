@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">rent_it_room</string>
+    <string name="front_layer_heading">Title</string>
 </resources>
