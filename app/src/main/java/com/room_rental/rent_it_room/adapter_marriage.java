@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class adapter_plots extends RecyclerView.Adapter<adapter_plots.Exampleviewholder> {
+public class adapter_marriage extends RecyclerView.Adapter<adapter_marriage.Exampleviewholder> {
 
     private ArrayList<suggestion_class> mexamplelist;
-    private adapter_plots.OnitemClickListner mlistner;
+    private adapter_marriage.OnitemClickListner mlistner;
 
 
 
@@ -28,7 +28,7 @@ public class adapter_plots extends RecyclerView.Adapter<adapter_plots.Examplevie
 
 
 
-    public void setonitemclickedlistner(adapter_plots.OnitemClickListner listner)
+    public void setonitemclickedlistner(adapter_marriage.OnitemClickListner listner)
     {
         mlistner=listner;
     }
@@ -37,7 +37,7 @@ public class adapter_plots extends RecyclerView.Adapter<adapter_plots.Examplevie
         public TextView owner_name,cost;
         public ImageView expand,featured_image;
 
-        public Exampleviewholder(@NonNull View itemView, final adapter_plots.OnitemClickListner listner) {
+        public Exampleviewholder(@NonNull View itemView, final adapter_marriage.OnitemClickListner listner) {
             super(itemView);
             owner_name=itemView.findViewById(R.id.owner_name);
             cost=itemView.findViewById(R.id.price);
@@ -69,26 +69,26 @@ public class adapter_plots extends RecyclerView.Adapter<adapter_plots.Examplevie
 
         }
     }
-    public adapter_plots(ArrayList<suggestion_class> exaplelist){
+    public adapter_marriage(ArrayList<suggestion_class> exaplelist){
 
         mexamplelist=exaplelist;
     }
 
     @NonNull
     @Override
-    public adapter_plots.Exampleviewholder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public adapter_marriage.Exampleviewholder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
 
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.room_suggestion,parent,false);
-        adapter_plots.Exampleviewholder evh= new adapter_plots.Exampleviewholder(v,mlistner);
+        adapter_marriage.Exampleviewholder evh= new adapter_marriage.Exampleviewholder(v,mlistner);
         return  evh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final adapter_plots.Exampleviewholder holder, int i) {
+    public void onBindViewHolder(@NonNull final adapter_marriage.Exampleviewholder holder, int i) {
 
         final suggestion_class currentitem =mexamplelist.get(i);
-        holder.featured_image.setImageResource(R.drawable.plots);
+        holder.featured_image.setImageResource(R.drawable.marruage);
         holder.owner_name.setText(currentitem.owner_name);
         holder.cost.setText(currentitem.price);
     }
@@ -99,3 +99,4 @@ public class adapter_plots extends RecyclerView.Adapter<adapter_plots.Examplevie
         return mexamplelist.size();
     }
 }
+
