@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">rent_it_room</string>
     <string name="front_layer_heading">Title</string>
+
+    <string name="pay_rent">Pay rent</string>
+    <string name="records">Records</string>
+    <string name="favorites">Favorites</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="add_loc">add location</string>
     <string name="what_are_you_looking_for">What are you looking for?</string>
+
 </resources>
